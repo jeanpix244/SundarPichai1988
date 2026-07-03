@@ -31,7 +31,7 @@ const aiChatbots = [
 
 export default function Home({ allPostsData }) {
   return (
-    <div style={{ backgroundColor: 'green', minHeight: '100vh', padding: '1rem' }}>
+    <div style={{ backgroundColor: '#faf8f5', minHeight: '100vh', padding: '1rem', fontFamily: 'Georgia, serif', color: '#2d3748' }}>
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
@@ -39,12 +39,12 @@ export default function Home({ allPostsData }) {
 
         {/* Intro Section */}
         <section className={utilStyles.headingMd}>
-          <p>Здравствуйте. Меня зовут Сундар Пичаи. Я веб-разработчик из Санта-Розы, Калифорния.</p>
-          <p>
+          <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>Здравствуйте. Меня зовут Сундар Пичаи. Я веб-разработчик из Санта-Розы, Калифорния.</p>
+          <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
             (Пичаи перешёл в Google в 2004 году, где он возглавлял направления менеджмента и
             инновационной деятельности линеек клиент-ориентированных продуктов Google, в том числе Google Chrome
             и Chrome OS, а также в значительной степени отвечал за Google Drive.{' '}
-            <a href="https://nextjs.org/learn" style={{ fontSize: 'x-large' }}>
+            <a href="https://nextjs.org/learn" style={{ fontSize: '1.1rem', color: '#2563eb' }}>
               our Next.js tutorial
             </a>.)
           </p>
@@ -52,7 +52,7 @@ export default function Home({ allPostsData }) {
 
         {/* AI Chatbot Links Section */}
         <section className={utilStyles.headingMd}>
-          <h2 className={utilStyles.headingLg}>AI Chatbots Available Online</h2>
+          <h2 className={utilStyles.headingLg} style={{ color: '#1a202c' }}>AI Chatbots Available Online</h2>
           <ul className={utilStyles.list}>
             {aiChatbots.map(({ name, url }) => (
               <li className={utilStyles.listItem} key={name}>
@@ -60,7 +60,7 @@ export default function Home({ allPostsData }) {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontSize: 'x-large', color: '#0070f3', fontWeight: 'bold' }}
+                  style={{ fontSize: '1.1rem', color: '#2563eb', fontWeight: '500' }}
                 >
                   {name}
                 </a>
@@ -71,15 +71,15 @@ export default function Home({ allPostsData }) {
 
         {/* Blog Section */}
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <h2 className={utilStyles.headingLg}>Blog</h2>
+          <h2 className={utilStyles.headingLg} style={{ color: '#1a202c' }}>Blog</h2>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, title, date }) => (
               <li className={utilStyles.listItem} key={id}>
-                <Link href={`/posts/${id}`} style={{ fontSize: 'x-large' }}>
+                <Link href={`/posts/${id}`} style={{ fontSize: '1.1rem', color: '#2563eb' }}>
                   {title}
                 </Link>
                 <br />
-                <small className={utilStyles.lightText}>
+                <small className={utilStyles.lightText} style={{ color: '#718096' }}>
                   {date}
                 </small>
               </li>
@@ -89,13 +89,13 @@ export default function Home({ allPostsData }) {
 
         {/* Extra Links Section */}
         <section className={utilStyles.headingMd}>
-          <h2>Absolute URLs</h2>
+          <h2 style={{ color: '#1a202c' }}>Absolute URLs</h2>
           <p>
             <a
               href="https://www.w3.org/"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ fontSize: 'x-large' }}
+              style={{ fontSize: '1.1rem', color: '#2563eb' }}
             >
               W3C
             </a>
@@ -105,22 +105,22 @@ export default function Home({ allPostsData }) {
               href="https://www.google.com/"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ fontSize: 'x-large' }}
+              style={{ fontSize: '1.1rem', color: '#2563eb' }}
             >
               Google
             </a>
           </p>
 
-          <h2>Relative URLs</h2>
+          <h2 style={{ color: '#1a202c' }}>Relative URLs</h2>
           <p>
-            <a href="https://react.dev/learn" style={{ fontSize: 'x-large' }}>
+            <a href="https://react.dev/learn" style={{ fontSize: '1.1rem', color: '#2563eb' }}>
               react
             </a>
           </p>
           <p>
             <a
               href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D1%87%D0%B0%D0%B8,_%D0%A1%D1%83%D0%BD%D0%B4%D0%B0%D1%80"
-              style={{ fontSize: 'x-large' }}
+              style={{ fontSize: '1.1rem', color: '#2563eb' }}
             >
               s. pichai
             </a>
